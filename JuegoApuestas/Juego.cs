@@ -86,31 +86,35 @@ namespace JuegoApuestas
 			do {
 				//muestraJugadores(jugador1, jugador2);
 				interfazGrafica.refrescaDatosPantalla(jugador1, jugador2, oCasino);
-				interfazGrafica.solicitaApuestas(jugador1, jugador2, 6, 6, 70, 6);
+				interfazGrafica.solicitaApuesta(jugador1, 6, 6);
+				interfazGrafica.solicitaApuesta(jugador2, 80, 6);
 				//Console.ReadKey(true);
 				interfazGrafica.refrescaDatosPantalla(jugador1, jugador2, oCasino);
 				resultado = oCasino.arrojaDados();
 				if (resultado == jugador1.getNumeroApostado()) {
 					//Console.WriteLine("El jugador {0} ha ganado!", jugador1.getNombre());
-					Console.SetCursorPosition(3, 25);
+					Console.SetCursorPosition(6, 25);
 					Console.WriteLine("¡¡¡ YOU WIN !!!");
 					oCasino.pagaApuesta(jugador1, jugador1.getTipoApuesta());
 				} else {
 					//Console.WriteLine("El jugador {0} ha perdido!", jugador1.getNombre());
-					Console.SetCursorPosition(3, 25);
+					Console.SetCursorPosition(6, 25);
 					oCasino.cobraApuesta(jugador1, jugador1.getTipoApuesta());
 					Console.WriteLine("¡¡¡ YOU LOSE !!!");
 				}
 				if (resultado == jugador2.getNumeroApostado()) {
 					//Console.WriteLine("El jugador {0} ha ganado!", jugador2.getNombre());
 					Console.SetCursorPosition(80, 25);
+					oCasino.pagaApuesta(jugador2, jugador2.getTipoApuesta());
 					Console.WriteLine("¡¡¡ YOU WIN !!!");
-					oCasino.pagaApuesta(jugador2, 3);
 				} else {
 					//Console.WriteLine("El jugador {0} ha perdido!", jugador2.getNombre());
 					Console.SetCursorPosition(80, 25);
+					oCasino.cobraApuesta(jugador2, jugador2.getTipoApuesta());
 					Console.WriteLine("¡¡¡ YOU LOSE !!!");
 				}
+				jugador1.setApuesta(0, 0, 0);
+				jugador2.setApuesta(0, 0, 0);
 				Console.ReadKey();
 			} while (jugador1.getSaldo() >= 0 && jugador2.getSaldo() >= 0 && oCasino.getPozo() >= 0);
 		}

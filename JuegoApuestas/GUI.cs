@@ -61,43 +61,43 @@ namespace JuegoApuestas
 			jugador.setNombre(nombre);
 		}
 		
-		public void solicitaApuestas(Jugador jugador1, Jugador jugador2, int desplazamientoXJugador1,int desplazamientoYJugador1, int desplazamientoXJugador2, int desplazamientoYJugador2){
+		public void solicitaApuesta(Jugador jugador, int desplazamientoX, int desplazamientoY){
 			//Console.WriteLine("Ingrese apuesta: ");
 			int importe, numero, tipoApuesta = 1;
 			
-			Console.SetCursorPosition(desplazamientoXJugador1, desplazamientoYJugador1);
+			Console.SetCursorPosition(desplazamientoX, desplazamientoY);
 			Console.BackgroundColor = ConsoleColor.DarkMagenta;
 			Console.ForegroundColor = ConsoleColor.White;
 			for (int i = 6; i < 13; i++) {
-				Console.SetCursorPosition(10, i);
-				Console.Write("                ");
+				Console.SetCursorPosition(desplazamientoX, i);
+				Console.Write("                    ");
 			}
 			
-			Console.SetCursorPosition(desplazamientoXJugador1, desplazamientoYJugador1);
-			Console.Write("\t\tAPUESTA");
+			Console.SetCursorPosition(desplazamientoX + 6, desplazamientoY);
+			Console.Write("APUESTA");
 			//jugador1.setApuesta(importe, numero, tipoApuesta);
-			Console.SetCursorPosition(desplazamientoXJugador1, desplazamientoYJugador1 + 1);
-			Console.WriteLine("\tIMPORTE:");
-			Console.SetCursorPosition(desplazamientoXJugador1, desplazamientoYJugador1 + 2);
-			Console.WriteLine("\tNUMERO: ");
-			Console.SetCursorPosition(desplazamientoXJugador1, desplazamientoYJugador1 + 3);
-			Console.WriteLine("\tTIPO APUESTA", jugador1.getNumeroApostado());
-			Console.SetCursorPosition(desplazamientoXJugador1, desplazamientoYJugador1 + 4);
-			Console.WriteLine("\tCONSERVADORA", jugador1.getImporteApostado());
-			Console.SetCursorPosition(desplazamientoXJugador1, desplazamientoYJugador1 + 5);
-			Console.WriteLine("\tARRIESGADA", jugador1.getImporteApostado());
-			Console.SetCursorPosition(desplazamientoXJugador1, desplazamientoYJugador1 + 6);
-			Console.WriteLine("\tDESESPERADA", jugador1.getImporteApostado());
+			Console.SetCursorPosition(desplazamientoX + 3, desplazamientoY + 1);
+			Console.WriteLine("IMPORTE:");
+			Console.SetCursorPosition(desplazamientoX + 3, desplazamientoY + 2);
+			Console.WriteLine("NUMERO: ");
+			Console.SetCursorPosition(desplazamientoX + 4, desplazamientoY + 3);
+			Console.WriteLine("TIPO APUESTA", jugador.getNumeroApostado());
+			Console.SetCursorPosition(desplazamientoX + 4, desplazamientoY + 4);
+			Console.WriteLine("CONSERVADORA", jugador.getImporteApostado());
+			Console.SetCursorPosition(desplazamientoX + 4, desplazamientoY + 5);
+			Console.WriteLine("ARRIESGADA", jugador.getImporteApostado());
+			Console.SetCursorPosition(desplazamientoX + 4, desplazamientoY + 6);
+			Console.WriteLine("DESESPERADA", jugador.getImporteApostado());
 			Console.ResetColor();
-			Console.SetCursorPosition(desplazamientoXJugador1 + 10, desplazamientoYJugador1 + 1);
+			Console.SetCursorPosition(desplazamientoX + 11, desplazamientoY + 1);
 			Console.BackgroundColor = ConsoleColor.White;
 			Console.ForegroundColor = ConsoleColor.Black;
 			Console.Write("     ");
-			Console.SetCursorPosition(desplazamientoXJugador1 + 10, desplazamientoYJugador1 + 2);
+			Console.SetCursorPosition(desplazamientoX + 10, desplazamientoY + 2);
 			Console.Write("     ");
-			Console.SetCursorPosition(desplazamientoXJugador1 + 10, desplazamientoYJugador1 + 1);
+			Console.SetCursorPosition(desplazamientoX + 11, desplazamientoY + 1);
 			importe = int.Parse(Console.ReadLine());
-			Console.SetCursorPosition(desplazamientoXJugador1 + 10, desplazamientoYJugador1 + 2);
+			Console.SetCursorPosition(desplazamientoX + 10, desplazamientoY + 2);
 			numero = int.Parse(Console.ReadLine());
 			Console.ResetColor();
 			
@@ -112,7 +112,7 @@ namespace JuegoApuestas
 			Console.CursorVisible = false;
 			do
 			{
-			   	Console.SetCursorPosition(desplazamientoXJugador1 + 10, desplazamientoYJugador1 + 1);
+			   	Console.SetCursorPosition(desplazamientoX + 10, desplazamientoY + 1);
 			    
 				  
 //			   	Console.BackgroundColor = ConsoleColor.DarkCyan;
@@ -126,11 +126,11 @@ namespace JuegoApuestas
 			        if (itemActual == i) {
 			           Console.BackgroundColor = ConsoleColor.Yellow;
 						Console.ForegroundColor = ConsoleColor.Black;
-						Console.SetCursorPosition(desplazamientoXJugador1 + 2, desplazamientoYJugador1 + i + 4);
+						Console.SetCursorPosition(desplazamientoX + 4, desplazamientoY + i + 4);
 			            Console.WriteLine(menuItems[i]);
 //			            Console.ResetColor();
 			        } else {
-			   			Console.SetCursorPosition(desplazamientoXJugador1 + 2, desplazamientoYJugador1 + i + 4);
+			   			Console.SetCursorPosition(desplazamientoX + 4, desplazamientoY + i + 4);
 			             Console.BackgroundColor = ConsoleColor.DarkMagenta;
 						Console.ForegroundColor = ConsoleColor.White;
 			   			
@@ -178,12 +178,10 @@ namespace JuegoApuestas
 							}
 			    }
 			   
-			} while (tecla.KeyChar != 13);
-//			return salir;
+			} while (tecla.Key != ConsoleKey.Enter);			
 			
-			
-			jugador1.setApuesta(importe, numero, tipoApuesta);
-			//jugador2.setApuesta(20, 8, 2);
+			jugador.setApuesta(importe, numero, tipoApuesta);
+			Console.CursorVisible = true;
 		}
 		
 		public void refrescaDatosPantalla(Jugador jugador1, Jugador jugador2, Casino oCasino){
