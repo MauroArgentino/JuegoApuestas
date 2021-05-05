@@ -1,0 +1,5 @@
+D:\usuarios\alumno\documentos\SharpDevelop Projects\JuegoApuestas\JuegoApuestas\bin\Debug\JuegoApuestas.exe
+D:\usuarios\alumno\documentos\SharpDevelop Projects\JuegoApuestas\JuegoApuestas\bin\Debug\JuegoApuestas.pdb
+D:\usuarios\alumno\documentos\SharpDevelop Projects\JuegoApuestas\JuegoApuestas\obj\Debug\JuegoApuestas.csprojResolveAssemblyReference.cache
+D:\usuarios\alumno\documentos\SharpDevelop Projects\JuegoApuestas\JuegoApuestas\obj\Debug\JuegoApuestas.exe
+D:\usuarios\alumno\documentos\SharpDevelop Projects\JuegoApuestas\JuegoApuestas\obj\Debug\JuegoApuestas.pdb

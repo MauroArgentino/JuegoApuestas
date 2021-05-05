@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+# SharpDevelop 4.4
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JuegoApuestas", "JuegoApuestas\JuegoApuestas.csproj", "{30C93CDA-2AA7-4E3A-A1B6-5ED44DF88295}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30C93CDA-2AA7-4E3A-A1B6-5ED44DF88295}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30C93CDA-2AA7-4E3A-A1B6-5ED44DF88295}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30C93CDA-2AA7-4E3A-A1B6-5ED44DF88295}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30C93CDA-2AA7-4E3A-A1B6-5ED44DF88295}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+EndGlobal
